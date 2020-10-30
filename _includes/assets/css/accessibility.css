@@ -1,9 +1,9 @@
-a[href="#main"] {
+a[href="#main"], a[href="#main"]:visited {
     position: absolute;
     top: 0;
     right: 100%;
     display: block;
-    background: #000;
+    background: var(--primary);
     padding: 1em;
     color: #fff;
     z-index: 10;
@@ -15,4 +15,8 @@ a[href="#main"]:focus {
 
 a:focus {
     outline: 2px solid var(--primary);
+}
+
+[tabindex="-1"] {
+    outline: none;
 }

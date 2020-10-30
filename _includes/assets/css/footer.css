@@ -2,3 +2,7 @@ footer {
     background-color: var(--primary);
     color: white;
 }
+
+footer p {
+    font-size: 1rem;
+}

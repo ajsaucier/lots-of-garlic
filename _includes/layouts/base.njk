@@ -4,16 +4,22 @@
 	{% include "components/head.njk" %}
 
 	<body>
-
+		<a href="#main">Skip to main content</a>
 		<header>
-			<em>
-				<a href="{{ '/' | url }}">{{ metadata.title }}</a>
-			</em>
-			{% include "components/nav.njk" %}
+			<div class="wrapper">
+				<a href="{{ '/' | url }}" aria-label="Lots of Garlic - Home">{% include "assets/img/lots-of-garlic-logo.svg" %}</a>
+				{% include "components/nav.njk" %}
+			</div>
 		</header>
-
-		<main>
-			{{ layoutContent | safe }}
+		<main tabindex="-1" id="main">
+			<section class="intro" aria-labelledby="welcome">
+				<div class="[ internal ] [ wrapper ]">
+					<h1>{{ title }}</h1>
+				</div>
+			</section>
+			<div class="[ internal ] [ wrapper ]">
+				{{ layoutContent | safe }}
+			</div>
 		</main>
 
 		{% include "components/footer.njk" %}

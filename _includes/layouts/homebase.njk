@@ -1,0 +1,30 @@
+<!doctype html>
+<html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
+
+	{% include "components/head.njk" %}
+
+	<body>
+		<a href="#main">Skip to main content</a>
+		<header>
+			<div class="wrapper">
+				<a href="{{ '/' | url }}" aria-label="Lots of Garlic - Home">{% include "assets/img/lots-of-garlic-logo.svg" %}</a>
+				{% include "components/nav.njk" %}
+			</div>
+		</header>
+		<main tabindex="-1" id="main">
+			<section class="intro" aria-labelledby="welcome">
+				<div class="[ home ] [ wrapper ]">
+					<h1 id="welcome">Welcome to Lots of Garlic!</h1>
+					<p>Mauris id mollis diam, a cursus arcu. Pellentesque tempus gravida mauris, eu luctus erat ultrices vel. Donec eu augue velit. Morbi pellentesque tempus sapien sed vulputate. Pellentesque a eros lobortis, fermentum elit nec, varius mauris. Nullam mollis risus fringilla pellentesque eleifend. Integer ipsum massa, accumsan non augue eu, consequat pretium nulla. Duis ac nibh sem. Proin venenatis est ac elit ultricies porttitor.</p>
+				</div>
+			</section>
+			<div class="[ home ] [ wrapper ]">
+				{{ layoutContent | safe }}
+			</div>
+		</main>
+
+		{% include "components/footer.njk" %}
+
+	</body>
+
+</html>

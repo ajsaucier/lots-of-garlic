@@ -1,0 +1,19 @@
+section.intro {
+    background: var(--primary);
+    padding: 2rem 0;
+    color: white;
+}
+
+section.intro .home.wrapper {
+    display: block;
+}
+
+section.intro .wrapper {
+    display: flex;
+    align-items: center;
+}
+
+section.intro .wrapper h1 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}

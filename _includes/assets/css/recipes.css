@@ -1,0 +1,10 @@
+[aria-label*="ingredients"] {
+    border: 6px solid var(--medium);
+    padding: 1rem;
+    background: var(--darkest);
+    color: var(--light);
+}
+
+[aria-label*="ingredients"] ul {
+    margin: 0;
+}

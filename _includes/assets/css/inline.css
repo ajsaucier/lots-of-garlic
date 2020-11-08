@@ -96,6 +96,7 @@ a[href]:not(:hover) {
 img {
 	max-width: 100%;
 	height: auto;
+	border: 10px solid var(--medium);
 }
 
 main {
@@ -190,14 +191,14 @@ a[rel="tag"]:visited {
 	margin: 0 .5em .5em 0;
 
 	border: 1px solid var(--primary);
-	background-color: var(--primary);
-	color: var(--secondary);
+	background-color: white;
+	color: var(--primary);
 }
 
 a[rel="tag"]:hover, a[rel="tag"]:focus {
-	border: 1px solid var(--secondary);
-	background-color: var(--secondary);
-	color: var(--primary);
+	border: 1px solid var(--primary);
+	background-color: var(--primary);
+	color: white;
 }
 
 a[rel="tag"]:last-child {

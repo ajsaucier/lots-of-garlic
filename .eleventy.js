@@ -62,6 +62,14 @@ module.exports = function(eleventyConfig) {
     return minified.code;
   });
 
+  // Add new collection for recipes
+  eleventyConfig.addCollection("recipes",
+  collection => collection
+    .getAllSorted()
+    .filter(item => item.url
+      && ! item.inputPath.includes('index.njk')
+      && item.inputPath.startsWith('./recipes/')))
+
   // Minify HTML output
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
     if (outputPath.indexOf(".html") > -1) {

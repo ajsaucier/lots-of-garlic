@@ -1,0 +1,9 @@
+{
+    "layout": "layouts/recipe.njk",
+    "permalink": "recipes/{{ title | slug }}/index.html",
+    "author": "Sara Saucier",
+    "tags": [
+      "recipe"
+    ]
+  }
+  

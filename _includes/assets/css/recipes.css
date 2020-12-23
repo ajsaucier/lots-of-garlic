@@ -3,8 +3,14 @@
     padding: 1rem;
     background: var(--darkest);
     color: var(--light);
+    border-radius: 40px;
 }
 
 [aria-label*="ingredients"] ul {
     margin: 0;
+}
+
+[aria-label*="ingredients"] ul li {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
 }

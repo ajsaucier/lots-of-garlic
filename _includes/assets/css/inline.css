@@ -48,6 +48,10 @@ main {
     padding-bottom: 1rem;
 }
 
+main.post {
+	border-top: 4px solid var(--darkest);
+}
+
 /* Headers */
 h1 {
 	font-size: 3rem;
@@ -158,8 +162,9 @@ header nav li a[href]:not(:hover) {
 	text-decoration: none;
 }
 
-header nav li a[data-current="current item"] {
+header nav li a[href][data-current="current item"] {
 	background-color: white;
+	text-decoration: underline;
 }
 
 /* Posts List */

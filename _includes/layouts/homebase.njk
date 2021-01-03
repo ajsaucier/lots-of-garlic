@@ -15,11 +15,24 @@
 			<section class="intro" aria-labelledby="welcome">
 				<div class="[ home ] [ wrapper ]">
 					<h1 id="welcome">Welcome to Lots of Garlic!</h1>
-					<p>Mauris id mollis diam, a cursus arcu. Pellentesque tempus gravida mauris, eu luctus erat ultrices vel. Donec eu augue velit. Morbi pellentesque tempus sapien sed vulputate. Pellentesque a eros lobortis, fermentum elit nec, varius mauris. Nullam mollis risus fringilla pellentesque eleifend. Integer ipsum massa, accumsan non augue eu, consequat pretium nulla. Duis ac nibh sem. Proin venenatis est ac elit ultricies porttitor.</p>
+					<p>Thanks for visiting my little space on the Internet. Here you'll find blog posts about my experiences with an autoimmune disease and recipes with autoimmune-friendly ingredients - and usually lots of garlic.</p>
 				</div>
 			</section>
-			<div class="[ home ] [ wrapper ]">
+			<div class="[ home ] [ wrapper ] [ posts ]">
+				<ul>
 				{{ layoutContent | safe }}
+				{% for post in collections.post | reverse %}
+				<li>
+					<a href="{{ post.url | url }}">
+						{% if post.data.title %}
+							{{ post.data.title }}
+						{% else %}
+							Untitled
+						{% endif %}
+					</a>
+				</li>
+				{% endfor %}
+				</ul>
 			</div>
 		</main>
 

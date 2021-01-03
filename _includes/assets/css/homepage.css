@@ -8,6 +8,14 @@ section.intro .home.wrapper {
     display: block;
 }
 
+.home.wrapper.posts li {
+    list-style-image: url('/static/img/garlic-bullet.svg');
+}
+
+.home.wrapper.posts li a {
+    font-size: 1.5rem;
+}
+
 section.intro .wrapper {
     display: flex;
     align-items: center;
